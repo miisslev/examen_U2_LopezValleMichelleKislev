@@ -1,0 +1,253 @@
+﻿/* estilos.css
+   Hoja de estilos externa para todo el sitio.
+   Uso de selectores de tipo, clase y ID, pseudoclases y flexbox.
+*/
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables de color (solo CSS simple, no preprocesadores) */
+/* Paleta armónica: azul suave + gris */
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --accent: #2b6ef6;
+    --muted: #6b7280;
+    --shadow: 0 6px 18px rgba(43,110,246,0.08);
+    --radius: 12px;
+    --max-width: 1000px;
+}
+
+/* Layout general */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg, var(--bg) 0%, #eef6ff 100%);
+    color: #1f2937;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Contenedor centrado */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+/* Header */
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+/* Logo (clase) */
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    background: var(--card);
+}
+
+/* ID selector */
+#main-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Tagline (clase) */
+.tagline {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Navegación: selector de tipo + clase */
+nav.nav {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 10px 0 18px 0;
+}
+
+/* Links de navegación: clase */
+.nav-link {
+    text-decoration: none;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 180ms ease, color 180ms ease, transform 120ms ease;
+}
+
+    /* Pseudoclase :hover y :active requeridas */
+    .nav-link:hover {
+        background: rgba(43,110,246,0.09);
+        color: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .nav-link:active {
+        transform: translateY(0);
+    }
+
+    /* Marca para enlaces externos */
+    .nav-link.external {
+        margin-left: auto; /* empuja a la derecha */
+    }
+
+/* Presentación: flexbox para foto y bio*/
+.presentacion {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-top: 18px;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* Foto de perfil (clase) */
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+/* Bio article */
+.bio h2 {
+    margin-bottom: 8px;
+}
+
+.bio p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+/* Lista de intereses (selector de tipo dentro de clase) */
+.intereses li {
+    list-style: disc inside;
+    margin-bottom: 6px;
+}
+
+/* Tabla de habilidades (uso de tipo selector + clase) */
+.tabla-habilidades {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+    .tabla-habilidades th,
+    .tabla-habilidades td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #eef2ff;
+    }
+
+    .tabla-habilidades th {
+        background: linear-gradient(90deg,#eef6ff,#f7fbff);
+        font-weight: 700;
+    }
+
+/* Proyectos: grid con cards */
+.proyectos-list {
+    margin-top: 18px;
+}
+
+.proyecto {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background: var(--card);
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.proj-img {
+    width: 180px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.proj-content h3 {
+    margin-bottom: 6px;
+}
+
+/* Formulario de contacto: estilos simples */
+.contacto-form form {
+    display: grid;
+    gap: 10px;
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contacto-form label {
+    font-weight: 600;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #e6edf9;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,var(--accent), #1e56d6);
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 120ms ease;
+    box-shadow: 0 8px 20px rgba(43,110,246,0.18);
+}
+
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+
+/* Footer */
+.site-footer {
+    margin-top: 28px;
+    padding: 18px 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* Responsividad básica (opcional - media query) */
+@media (max-width: 720px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .proj-img {
+        width: 100px;
+        height: 72px;
+    }
+}
+
+/* Comentario: fin de estilos.css */
