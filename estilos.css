@@ -1,17 +1,16 @@
 ﻿/* estilos.css
-   Hoja de estilos externa para todo el sitio.
-   Uso de selectores de tipo, clase y ID, pseudoclases y flexbox.
+
 */
 
-/* Reset básico */
+/* reset basico */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Variables de color (solo CSS simple, no preprocesadores) */
-/* Paleta armónica: azul suave + gris */
+/* variables de color 
+/* paleta de azul suave mas gris */
 :root {
     --bg: #f4f7fb;
     --card: #ffffff;
@@ -22,7 +21,7 @@
     --max-width: 1000px;
 }
 
-/* Layout general */
+/* layout general */
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     background: linear-gradient(180deg, var(--bg) 0%, #eef6ff 100%);
@@ -31,7 +30,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Contenedor centrado */
+/* contenedor centrado */
 .container {
     width: 90%;
     max-width: var(--max-width);
@@ -39,7 +38,7 @@ body {
     padding: 24px 0;
 }
 
-/* Header */
+/* header */
 .header-inner {
     display: flex;
     align-items: center;
@@ -47,7 +46,7 @@ body {
     padding: 12px 0;
 }
 
-/* Logo (clase) */
+/* logo */
 .logo {
     width: 64px;
     height: 64px;
@@ -57,19 +56,19 @@ body {
     background: var(--card);
 }
 
-/* ID selector */
+/* id selector */
 #main-title {
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-/* Tagline (clase) */
+/* tagline*/
 .tagline {
     color: var(--muted);
     font-size: 0.95rem;
 }
 
-/* Navegación: selector de tipo + clase */
+/* navegacion: selector de tipo mas clase */
 nav.nav {
     display: flex;
     gap: 14px;
@@ -77,7 +76,7 @@ nav.nav {
     padding: 10px 0 18px 0;
 }
 
-/* Links de navegación: clase */
+/* links de navegacion */
 .nav-link {
     text-decoration: none;
     color: var(--muted);
@@ -87,7 +86,7 @@ nav.nav {
     transition: background 180ms ease, color 180ms ease, transform 120ms ease;
 }
 
-    /* Pseudoclase :hover y :active requeridas */
+    /* pseudoclase hover y active */
     .nav-link:hover {
         background: rgba(43,110,246,0.09);
         color: var(--accent);
@@ -98,12 +97,12 @@ nav.nav {
         transform: translateY(0);
     }
 
-    /* Marca para enlaces externos */
+    /* marca para enlaces externos */
     .nav-link.external {
         margin-left: auto; /* empuja a la derecha */
     }
 
-/* Presentación: flexbox para foto y bio*/
+/* presentacion flexbox para foto y bio*/
 .presentacion {
     display: flex;
     gap: 24px;
@@ -115,7 +114,7 @@ nav.nav {
     box-shadow: var(--shadow);
 }
 
-/* Foto de perfil (clase) */
+/* foto de perfil  */
 .foto-perfil {
     width: 160px;
     height: 160px;
@@ -124,7 +123,7 @@ nav.nav {
     border: 4px solid #fff;
 }
 
-/* Bio article */
+/* Bio */
 .bio h2 {
     margin-bottom: 8px;
 }
@@ -134,13 +133,13 @@ nav.nav {
     margin-bottom: 12px;
 }
 
-/* Lista de intereses (selector de tipo dentro de clase) */
+/* lista de intereses */
 .intereses li {
     list-style: disc inside;
     margin-bottom: 6px;
 }
 
-/* Tabla de habilidades (uso de tipo selector + clase) */
+/* tabla de habilidades */
 .tabla-habilidades {
     width: 100%;
     border-collapse: collapse;
@@ -159,7 +158,7 @@ nav.nav {
         font-weight: 700;
     }
 
-/* Proyectos: grid con cards */
+/*proyectos grid con cards */
 .proyectos-list {
     margin-top: 18px;
 }
@@ -186,7 +185,7 @@ nav.nav {
     margin-bottom: 6px;
 }
 
-/* Formulario de contacto: estilos simples */
+/* formulario de contacto */
 .contacto-form form {
     display: grid;
     gap: 10px;
@@ -225,7 +224,7 @@ nav.nav {
         transform: translateY(-3px);
     }
 
-/* Footer */
+/* footer */
 .site-footer {
     margin-top: 28px;
     padding: 18px 0;
@@ -233,7 +232,7 @@ nav.nav {
     text-align: center;
 }
 
-/* Responsividad básica (opcional - media query) */
+/* responsividad basica ) */
 @media (max-width: 720px) {
     .presentacion {
         flex-direction: column;
@@ -250,4 +249,4 @@ nav.nav {
     }
 }
 
-/* Comentario: fin de estilos.css */
+
